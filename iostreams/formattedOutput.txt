@@ -1,0 +1,8 @@
+Formatted Output Example:
+Integer: 42
+Floating point number: 3.14
+Name: Ashok Reddy
+Left-aligned: Ashok Reddy
+Right-aligned: Ashok Reddy
+Current date and time: 2024-05-24 10:46:13
+User Ashok Reddy logged in at 2024-05-24 10:46:13 with an ID of 42
