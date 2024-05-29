@@ -1,0 +1,18 @@
+Strings can be compared by:
+
+1. Reference comparision (address comparision): 
+   
+   Checking whether the references
+   of 2 objects are same or not. 
+   
+   '==' operator when used to compare 2 Strings, 
+   it checks whether both the references are same or not
+   
+   
+   
+2. Content comparision: 
+   Checking whether the content of 2 String objects are same or not.
+   
+   equals() method is used to check whether 
+   the content of 2 string objects is same or not.
+
