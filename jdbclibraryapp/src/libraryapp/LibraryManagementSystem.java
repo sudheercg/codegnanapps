@@ -22,6 +22,7 @@ public class LibraryManagementSystem {
             System.out.println("7. View Borrowed Books");
             System.out.println("8. Exit");
 
+            System.out.println("Please enter your choice (1 - 8): ");
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
 

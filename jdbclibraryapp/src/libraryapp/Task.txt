@@ -1,0 +1,15 @@
+1. Create a database schema called librarydb
+2. Create a table in libraryDb ''
+  - id, title, author, publisher and year.
+3. Create a JDBC console based  App with the following operations - 
+   a. Create Book, 
+   b. Retrieve single book 
+   c. Retrieve all books(View all books) 
+   d. Update book using id. 
+   e. delete book 
+   
+ 4. Use proper Naming conventions and coding conventions. 
+ 5. Use appropriate exception handling. 
+ 
+ 
+
