@@ -1,31 +1,24 @@
 package com.codegnan.springbootapp.libraryapp;
 
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import lombok.Data;
-
-
 
 @Entity
 @Data
-
-public class Book {
-    @Id
+public class Member {
+ 
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String title;
-    private String author;
-    private String genre;
-    private boolean isAvailable;
+    private String username;
+    private String password;
+    private String role;  // ROLE_USER or ROLE_ADMIN
     
-    // Getters and setters
-    @OneToMany(mappedBy = "book")
-    private List<BorrowRecord> borrowRecords;
-    
+	/*
+	 * public Member(Long memberId) { id=memberId; }
+	 */
 }

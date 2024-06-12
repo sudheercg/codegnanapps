@@ -15,17 +15,27 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+	/*
+	 * @Bean public SecurityFilterChain securityFilterChain(HttpSecurity http)
+	 * throws Exception { http.csrf(csrf -> csrf.disable())
+	 * .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+	 * .requestMatchers("/api/auth/**").permitAll()
+	 * .requestMatchers("/api/books/**").authenticated() )
+	 * .httpBasic(Customizer.withDefaults()); return http.build(); }
+	 */
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorizeRequests -> 
                 authorizeRequests
-                    .requestMatchers("/api/auth/**").permitAll()
-                    .anyRequest().authenticated()
+                    .requestMatchers("/api/auth/**", "/api/members/**").permitAll() // Adjust access as needed
+                    .requestMatchers("/api/books/**").authenticated()
             )
             .httpBasic(Customizer.withDefaults());
         return http.build();
     }
+	
+	
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {

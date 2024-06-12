@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>ServletApp01</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+    
+   <context-param>
+     <param-name>dbURL</param-name>
+     <param-value>jdbc:mysql://localhost:3306/employee</param-value>
+   </context-param>
+   
+   <context-param>
+     <param-name>dbUser</param-name>
+     <param-value>root</param-value>
+   </context-param>
+   
+   <context-param>
+     <param-name>dbPassword</param-name>
+     <param-value>password</param-value>
+   </context-param>
+   
+     
+	<servlet>
+		<servlet-name>Demo</servlet-name>
+		<servlet-class>com.codegnan.servlets.DemoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Demo</servlet-name>
+		<url-pattern>/generic</url-pattern>
+	</servlet-mapping>
+
+
+
+   	<servlet>
+		<servlet-name>HttpServletDemo</servlet-name>
+		<servlet-class>com.codegnan.servlets.HttpServletDemo</servlet-class>
+		
+		<init-param>
+		  <param-name>username</param-name>
+		  <param-value>codegnanuser</param-value>
+		</init-param>
+		
+		<init-param>
+		  <param-name>password</param-name>
+		  <param-value>codegnanpwd</param-value>
+		</init-param>
+		
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HttpServletDemo</servlet-name>
+		<url-pattern>/httpdemo</url-pattern>
+	</servlet-mapping>
+   
+
+
+
+
+
+</web-app>

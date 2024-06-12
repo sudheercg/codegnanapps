@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+//http://localhost:8080/api/books
 @RequestMapping("/api/books")
 public class BookController {
     @Autowired
@@ -46,4 +47,23 @@ public class BookController {
         bookService.deleteBook(id);
         return ResponseEntity.noContent().build();
     }
+    
+    @PostMapping("/{id}/borrow")
+    public ResponseEntity<BorrowRecord> borrowBook(@PathVariable Long id, @RequestBody Long memberId) {
+        BorrowRecord record = bookService.borrowBook(id, memberId);
+        return ResponseEntity.ok(record);
+    }
+
+    @PostMapping("/{id}/return")
+    public ResponseEntity<Void> returnBook(@PathVariable Long id, @RequestBody Long memberId) {
+        bookService.returnBook(id, memberId);
+        return ResponseEntity.noContent().build();
+    }
+    
+    @GetMapping("/borrowed/{memberId}")
+    public ResponseEntity<List<BorrowRecord>> getBorrowedBooks(@PathVariable Long memberId) {
+        List<BorrowRecord> records = bookService.getBorrowedBooks(memberId);
+        return ResponseEntity.ok(records);
+    }
+    
 }
