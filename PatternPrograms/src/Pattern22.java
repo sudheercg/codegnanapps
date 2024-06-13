@@ -20,5 +20,6 @@ class Pattern22 {
 			System.out.print("\n");
 		}
 	}
+	
 
 }
