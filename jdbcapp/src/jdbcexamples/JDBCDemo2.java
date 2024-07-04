@@ -9,7 +9,7 @@ public class JDBCDemo2 {
 
 	public static void main(String[] args) {
 
-		String insertQuery = "Insert into employees(id,name) values(1,'Jagan')";
+		String insertQuery = "Insert into employee(id,name) values(22,'Jagan')";
 		// Step 1: Registering the Driver
 
 		try {

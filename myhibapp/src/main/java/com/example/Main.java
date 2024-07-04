@@ -5,41 +5,42 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class Main {
-    public static void main(String[] args) {
-        // Create a configuration instance
-    	
-    	//If cfg.xml in another package
-    	//Configuration configuration = new Configuration().configure("com/codegnan/resources/hibernate.cfg.xml");
+	public static void main(String[] args) {
+		// Create a configuration instance
 
-    	//if in default package
-    	Configuration configuration = new Configuration().configure();
+		// If cfg.xml in another package
+		// Configuration configuration = new
+		// Configuration().configure("com/codegnan/resources/hibernate.cfg.xml");
 
-        // Build a SessionFactory from the configuration
-        SessionFactory sessionFactory = configuration.buildSessionFactory();
+		// if in default package
+		Configuration configuration = new Configuration().configure();
 
-        // Obtain a session
-        Session session = sessionFactory.openSession();
+		// Build a SessionFactory from the configuration
+		SessionFactory sessionFactory = configuration.buildSessionFactory();
 
-        // Start a transaction
-        session.beginTransaction();
+		// Obtain a session
+		Session session = sessionFactory.openSession();
 
-        // Create an employee entity
-        Employee employee = new Employee("John Doe");
+		// Start a transaction
+		session.beginTransaction();
 
-        // Save the employee entity
-        session.save(employee);
+		// Create an employee entity
+		Employee employee = new Employee("Sudheer");
 
-        // Commit the transaction
-        session.getTransaction().commit();
+		// Save the employee entity
+		session.save(employee);
 
-        // Retrieve the employee entity
-        Employee retrievedEmployee = session.get(Employee.class, employee.getId());
-        System.out.println("Retrieved Employee: " + retrievedEmployee.getName());
+		// Commit the transaction
+		session.getTransaction().commit();
 
-        // Close the session
-        session.close();
+		// Retrieve the employee entity
+		Employee retrievedEmployee = session.get(Employee.class, employee.getId());
+		System.out.println("Retrieved Employee: " + retrievedEmployee.getName());
 
-        // Close the SessionFactory
-        sessionFactory.close();
-    }
+		// Close the session
+		session.close();
+
+		// Close the SessionFactory
+		sessionFactory.close();
+	}
 }
