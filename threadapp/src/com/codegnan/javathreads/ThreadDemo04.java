@@ -6,7 +6,7 @@ public class ThreadDemo04 {
 		MyThread t = new MyThread();
 		System.out.println("Thread starting");
 		t.start(); 
-		for (int i = 0; i < 5; i++) { // Fixed loop condition
+		for (int i = 0; i < 5; i++) {
 			System.out.println("Main Thread: " + i);
 			try {
 				Thread.sleep(500);

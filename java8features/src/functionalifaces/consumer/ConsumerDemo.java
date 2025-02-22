@@ -21,10 +21,7 @@ public class ConsumerDemo {
 	    	squareConsumer.accept(number);
 	    }
 	    
-	    
-	    
-		
-		
+	
 		
 		
 	}

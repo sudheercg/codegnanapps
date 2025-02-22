@@ -23,12 +23,9 @@ public class ThreadFlow {
 	}
 	
 	public static void main(String[] args) {
-		
 		ThreadFlow flow = new ThreadFlow();
 		flow.method1();
-		System.out.println("Main method ended");
-
-		
+		System.out.println("Main method ended");	
 	}
 
 }

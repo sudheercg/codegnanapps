@@ -19,6 +19,9 @@ public class MethodReferencesDemo {
 		// Using Method References
 		MethodReferencesDemo md = new MethodReferencesDemo();
 		MyInterface m1 = md::doSomething;
+		MethodReferencesDemo md3 = new MethodReferencesDemo();
+		MyInterface m4 = md::anotherMethod;
+
 		m1.myMethod();
 
 		// Using Method References

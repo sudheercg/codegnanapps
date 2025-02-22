@@ -1,0 +1,37 @@
+Wrapper Classes in Java:
+=========================
+
+Wrapper classes are used to convert primitive data types like int, char,boolean etc. into
+objects. 
+
+byte - Byte
+short - Short
+ int - >  Integer
+ char ->  Character
+ float -  Float
+ double ->Double
+ boolean - Boolean
+ long - Long
+ 
+ These wrapper classes are useful when working with Collections like ArrayList, LinkedList, 
+ LinkedHashSet or HashMap etc. , 
+ 
+ Collections can only store objects, they cannot store primitive types. 
+ 
+ AutoBoxing: 
+ Autoboxing is automatic Conversion of a primitive data type to an object type.
+ 
+ AutoUnboxing or Unboxing: 
+ Automatic conversion of an object to primitive type.
+ It is the reverse process for autoboxing.  - Wrapper class object is automatically
+ converted back into its corresponding primitive type.  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
